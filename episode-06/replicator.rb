@@ -1,3 +1,4 @@
+require "pry"
 class Replicator
 
   # When the Enterprise calls Replicator.new, this method executes.
@@ -50,7 +51,7 @@ class Replicator
     # transported and @inside_replicator will contain the glass
     # in its contents.
     retrieve_glass
-
+    # binding.pry
     # Setup an instance variable to access the glass.
     @glass = @inside_replicator.contents.first
 

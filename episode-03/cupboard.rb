@@ -25,8 +25,8 @@ class Cupboard
     @shelf.contents.find { |obj| obj.class == Glass }
   end
 
-  def wesley_takes_glasses_for_a_science_project
-    @shelf.contents.size.times { @shelf.contents.pop }
-  end
+  # def wesley_takes_glasses_for_a_science_project
+  #   @shelf.contents.size.times { @shelf.contents.pop }
+  # end
 
 end
