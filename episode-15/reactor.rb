@@ -10,7 +10,7 @@
 # If it's working properly, when it's instantiated
 # the power should be turned on and it should be
 # stocked with @dilithium_crystals
-
+require 'pry'
 class Reactor
 
   def initialize(enterprise)
