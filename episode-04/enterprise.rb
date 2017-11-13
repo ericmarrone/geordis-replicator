@@ -5,7 +5,7 @@
   # - passes itself if necessary to each instantiated component
   #   so that they can access other parts of the Enterprise.
   #   e.g. the replicator needs to access the reactor and transporter
-
+require "pry"
 class Enterprise
 
   def initialize

@@ -41,6 +41,7 @@ class Replicator
   # it returns what's expect.
   def replicate(recipe)
 
+
     # Setup an instance variable for the recipe
     # so that other methods can see what the recipe is
     @recipe = recipe
@@ -50,6 +51,7 @@ class Replicator
     # transported and @inside_replicator will contain the glass
     # in its contents.
     retrieve_glass
+    # binding.pry
 
     # Setup an instance variable to access the glass.
     @glass = @inside_replicator.contents.first
@@ -88,6 +90,7 @@ class Replicator
 
   # This moves the glass from the cupboard to inside the replicator.
   def retrieve_glass
+    # binding.pry
     @enterprise.transporter.energize(
       @enterprise.cupboard.find_glass,
       @enterprise.cupboard.shelf,
@@ -114,7 +117,7 @@ class Replicator
       @enterprise.transporter.energize(
         # Geordi is in a jokey mood and
         # reprograms the replicator
-        @enterprise.pantry.find_ingredient('banana'),
+        @enterprise.pantry.find_ingredient(ingredient_name),
         @enterprise.pantry.shelf,
         glass_inside_replicator.inside
       )

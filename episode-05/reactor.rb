@@ -10,7 +10,7 @@
 # If it's working properly, when it's instantiated
 # the power should be turned on and it should be
 # stocked with @dilithium_crystals
-
+require "pry"
 class Reactor
 
   def initialize(enterprise)
@@ -62,13 +62,13 @@ class Reactor
     !@on
   end
 
-  def datas_cat_eats_dilithium_crystals
-    @dilithium_crystals -= 50
-  end
+  # def datas_cat_eats_dilithium_crystals
+  #   @dilithium_crystals -= 50
+  # end
 
   def heat_items_in_core
     @core.contents.each do |item|
-      datas_cat_eats_dilithium_crystals
+      # datas_cat_eats_dilithium_crystals
       item.temperature += 1 if draw_power
     end
   end
